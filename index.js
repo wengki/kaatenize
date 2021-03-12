@@ -33,7 +33,7 @@ function decrypt(text, key) {
 
 function sendData(url_string_query, data_json, key, callback) {
     let requestLoginEnc = encrypt(JSON.stringify(data_json), key);
-    $.post(BASE_URL + url_string_query, {
+    $.post(url_string_query, {
         data: requestLoginEnc
     }, function (r) {
         let resData = decrypt(r, key);

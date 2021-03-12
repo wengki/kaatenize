@@ -2,7 +2,7 @@
 
 Encrypt and Decryp data from javascript to php or vice versa.
 
-# Installataion
+# Installatain
 
 `npm i kaatenize --save`
 

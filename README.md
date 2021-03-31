@@ -7,14 +7,13 @@ Encrypt and Decryp data from javascript to php or vice versa.
 `npm i kaatenize --save`
 
 ```
-import { sendData } from kaatenize;
-
-var key = 'abcdefghijklmnopqrstuv0123456789';
-var contohData = {
-    test : "Hanya test message",
-};
-
-sendData("http://localhost:8000/receivedata", contohData, key, function (return) {
-	console.log(return);
-});
+var kaatenize = require("kaatenize");
+const $ = require('jquery');
+var enkripsi = new kaatenize();
+var key = 'asdflkjasdflkjasdflkjasdflkjasdf';
+var text = "cuma mo coba";
+var data = enkripsi.encrypt(text, key);
+console.log(data)
+var dataTranslate = enkripsi.decrypt(data, key);
+console.log(dataTranslate)
 ```
